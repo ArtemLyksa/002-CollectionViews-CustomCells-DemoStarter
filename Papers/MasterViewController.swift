@@ -87,11 +87,12 @@ class MasterViewController: UICollectionViewController {
     
     // let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath)
     
-    let cell = collectionView.dequeueReusableCellWithReuseIdentifier("CollectionViewCell", forIndexPath: indexPath) as! CollectionViewCell
+    let cell = collectionView.dequeueReusableCellWithReuseIdentifier("PaperCell", forIndexPath: indexPath) as! PaperCell
     // Configure the cell
     
-    
-    cell.textLabel!.text = "\(indexPath.row)"
+    if let paper = papersDataSource.paperForItemAtIndexPath(indexPath) {
+        cell.paper = paper
+    }
     
     return cell
   }

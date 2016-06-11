@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="O5B-Aa-xCZ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="O5B-Aa-xCZ">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -40,40 +40,27 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CollectionViewCell" id="Aqe-CW-8BC" customClass="CollectionViewCell" customModule="Papers" customModuleProvider="target">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PaperCell" id="Aqe-CW-8BC" customClass="PaperCell" customModule="Papers" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="64" width="200" height="200"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zio-ff-Eh4">
-                                            <rect key="frame" x="2" y="2" width="196" height="196"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="92V-b1-0nS">
-                                                    <rect key="frame" x="77" y="87" width="42" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <color key="backgroundColor" red="0.031372549020000001" green="0.25882352939999997" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
-                                            <constraints>
-                                                <constraint firstItem="92V-b1-0nS" firstAttribute="centerX" secondItem="zio-ff-Eh4" secondAttribute="centerX" id="78Q-dB-Vve"/>
-                                                <constraint firstItem="92V-b1-0nS" firstAttribute="centerY" secondItem="zio-ff-Eh4" secondAttribute="centerY" id="VE3-GT-rGs"/>
-                                            </constraints>
-                                        </view>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vrg-xJ-QpM">
+                                            <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                        </imageView>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <constraints>
-                                    <constraint firstItem="zio-ff-Eh4" firstAttribute="leading" secondItem="Aqe-CW-8BC" secondAttribute="leading" constant="2" id="Yt9-b7-Hgo"/>
-                                    <constraint firstItem="zio-ff-Eh4" firstAttribute="top" secondItem="Aqe-CW-8BC" secondAttribute="top" constant="2" id="alK-35-us9"/>
-                                    <constraint firstAttribute="trailing" secondItem="zio-ff-Eh4" secondAttribute="trailing" constant="2" id="bR7-aa-yfO"/>
-                                    <constraint firstAttribute="bottom" secondItem="zio-ff-Eh4" secondAttribute="bottom" constant="2" id="rxe-nA-gYN"/>
+                                    <constraint firstAttribute="trailing" secondItem="vrg-xJ-QpM" secondAttribute="trailing" id="ALX-WZ-LeM"/>
+                                    <constraint firstItem="vrg-xJ-QpM" firstAttribute="leading" secondItem="Aqe-CW-8BC" secondAttribute="leading" id="HZT-ZA-MR6"/>
+                                    <constraint firstAttribute="bottom" secondItem="vrg-xJ-QpM" secondAttribute="bottom" id="SX2-Ye-9Bq"/>
+                                    <constraint firstItem="vrg-xJ-QpM" firstAttribute="top" secondItem="Aqe-CW-8BC" secondAttribute="top" id="eET-m3-Yon"/>
                                 </constraints>
                                 <connections>
-                                    <outlet property="textLabel" destination="92V-b1-0nS" id="Tua-63-2J9"/>
+                                    <outlet property="paperImageVIew" destination="vrg-xJ-QpM" id="IVA-Q8-wHT"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
